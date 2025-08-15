@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Gift, Heart, User, Mail, Phone, DollarSign, ChevronDown, ChevronUp, Send } from 'lucide-react';
+import { Gift, Heart, User, Mail, Phone, DollarSign, ChevronDown, ChevronUp, Send, Package } from 'lucide-react';
 
 const PledgeSection = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
@@ -8,6 +8,7 @@ const PledgeSection = () => {
     name: '',
     email: '',
     phone: '',
+    item: '',
     amount: '',
     message: ''
   });
@@ -28,24 +29,71 @@ const PledgeSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    try {
+      // Create a hidden form to bypass CORS
+      const form = document.createElement('form');
+      form.action = 'https://script.google.com/macros/s/AKfycbzJex6kUSMQRvBJuLF9778I2OuhQRYgwGne9wim6uqHMBleMFn6NSq2zVlYeeaZ0ZZ-/exec';
+      form.method = 'POST';
+      form.target = 'hidden_iframe';
+      form.style.display = 'none';
+
+      // Add form fields
+      const fields = [
+        { name: 'name', value: formData.name },
+        { name: 'email', value: formData.email },
+        { name: 'phone', value: formData.phone },
+        { name: 'item', value: formData.item },
+        { name: 'amount', value: formData.amount }
+      ];
+
+      fields.forEach(field => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = field.name;
+        input.value = field.value;
+        form.appendChild(input);
+      });
+
+      // Create hidden iframe for form submission
+      let iframe = document.getElementById('hidden_iframe');
+      if (!iframe) {
+        iframe = document.createElement('iframe');
+        iframe.name = 'hidden_iframe';
+        iframe.id = 'hidden_iframe';
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+      }
+
+      // Submit form
+      document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
+
+      // Simulate processing time
+      setTimeout(() => {
+        setSubmitted(true);
+        setIsSubmitting(false);
+      }, 2000);
+      
+    } catch (error) {
+      console.error('Error submitting pledge:', error);
+      alert('There was an error submitting your pledge. Please try again.');
+      setIsSubmitting(false);
+    }
     
-    setSubmitted(true);
-    setIsSubmitting(false);
-    
-    // Reset form after 3 seconds
+    // Reset form after 5 seconds
     setTimeout(() => {
       setSubmitted(false);
       setFormData({
         name: '',
         email: '',
         phone: '',
+        item: '',
         amount: '',
         message: ''
       });
       setIsFormVisible(false);
-    }, 3000);
+    }, 5000);
   };
 
   const toggleForm = () => {
@@ -183,6 +231,33 @@ const PledgeSection = () => {
                         </div>
 
                         <div>
+                          <label className="block text-sm font-semibold text-gray-700 mb-2">
+                            <Package className="w-4 h-4 inline mr-2" />
+                            Pledge Item *
+                          </label>
+                          <select
+                            name="item"
+                            value={formData.item}
+                            onChange={handleInputChange}
+                            required
+                            className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-dark-green focus:border-transparent transition-all duration-200"
+                          >
+                            <option value="">Select pledge item</option>
+                            <option value="General Fund">General Fund</option>
+                            <option value="Accommodation">Accommodation</option>
+                            <option value="Meals">Meals</option>
+                            <option value="Transport">Transport</option>
+                            <option value="Equipment">Equipment</option>
+                            <option value="Sound System">Sound System</option>
+                            <option value="Decorations">Decorations</option>
+                            <option value="Security">Security</option>
+                            <option value="Guest Speakers">Guest Speakers</option>
+                            <option value="Medical Support">Medical Support</option>
+                            <option value="Other">Other</option>
+                          </select>
+                        </div>
+
+                        <div className="sm:col-span-2">
                           <label className="block text-sm font-semibold text-gray-700 mb-2">
                             <DollarSign className="w-4 h-4 inline mr-2" />
                             Pledge Amount (KSh) *
