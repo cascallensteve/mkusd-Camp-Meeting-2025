@@ -3,7 +3,7 @@
 
 export default {
   // Event Details
-  eventName: "MKU SDA Camp",
+  eventName: "MKU SDA CHURCH CAMP MEETING 2025",
   logo: "https://res.cloudinary.com/dqvsjtkqw/image/upload/v1751876492/image-removebg-preview_hss6vx.png",
   startDate: new Date('2025-09-27T00:00:00'), // Camp start date  
   targetDate: new Date('2025-09-27T00:00:00'), // Camp meeting date
@@ -38,7 +38,7 @@ export default {
       id: 1,
       name: "LANCETH ODILLA",
       role: "GUEST SPEAKER",
-      bio: "International evangelist and inspirational speaker",
+      bio: " inspirational speaker",
       photo: "https://res.cloudinary.com/dqvsjtkqw/image/upload/v1754981692/WhatsApp_Image_2025-08-05_at_08.33.08_276d1497_hdjvca.jpg",
       message: "Dear beloved brothers and sisters, this camp meeting is a divine appointment for spiritual renewal. Come expecting God to speak to your heart and transform your life. Together, we will experience the power of His word and the fellowship of believers.",
       shortMessage: "This camp meeting is a divine appointment for spiritual renewal. Come expecting God to speak to your heart and transform your life.",
@@ -64,7 +64,7 @@ export default {
     {
       id: 3,
       name: "Wycliffe Sobera",
-      role: "AMR & Ministry Leader",
+      role: "AMR & Ministry",
       bio: "Passionate ministry leader and youth coordinator",
       photo: "https://res.cloudinary.com/dqvsjtkqw/image/upload/v1755000738/WhatsApp_Image_2025-07-31_at_09.28.41_4b63d336_cqkzhd.jpg",
       message: "Beloved the Camp meeting is a holy convocation, where we meet, as God bestows upon us those rich spiritual blessings that we desire most. The call of God today is to a new life in Christ Jesus. We need to be born again. We need to return to our first love. Sin has deadened our sensibilities and seared our consciences. Our vision has become blurred, so that we can not see with true perspective. We have become so fascinated with the things of time and sense that the appeal of heaven has lost its power in our lives.",
@@ -103,7 +103,7 @@ export default {
         id: 6,
         name: "Dr JAKECH ELIASH DAWN",
         role: "Prophecy Speaker",
-        bio: "Prophet and spiritual guide with deep insights into end-time prophecies",
+        bio: "spiritual guide with deep insights into end-time prophecies",
         photo: "https://res.cloudinary.com/dqvsjtkqw/image/upload/v1755008249/WhatsApp_Image_2025-08-05_at_08.33.44_2b7ffb27_aszfa8.jpg",
         message: "Beloved saints, we are living in the final moments of earth's history. The prophecies are being fulfilled before our very eyes. This refers to the sacrifice of Jesus Christ, who is often referred to as the Lamb of God. His blood is seen as the atoning sacrifice for the sins of humanity, cleansing them from sin and enabling them to stand righteous before God. Come prepared to understand God's prophetic timeline and your place in it.",
         shortMessage: "We are living in the final moments of earth's history. The prophecies are being fulfilled before our very eyes. Come prepared to understand God's prophetic timeline and your place in it.",
