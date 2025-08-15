@@ -71,7 +71,7 @@ const Navbar = ({ onBudgetClick }) => {
             </div>
             <div className="hidden sm:block">
               <h1 className={`text-xl font-bold ${scrolled ? 'text-gray-900' : 'text-white'}`}>MKU SDA</h1>
-              <p className={`text-sm ${scrolled ? 'text-gray-600' : 'text-white/80'}`}>Camp Fundraiser</p>
+              <p className={`text-sm ${scrolled ? 'text-gray-600' : 'text-white/80'}`}>MKusda church camp meeting 2025</p>
             </div>
           </motion.div>
 

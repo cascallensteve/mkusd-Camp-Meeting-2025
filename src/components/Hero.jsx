@@ -129,7 +129,7 @@ const Hero = () => {
         }}></div>
       </div>
 
-      <div className="relative z-10 text-center text-white section-padding">
+      <div className="relative z-10 text-center text-white section-padding pt-20 sm:pt-24">
         <div className="container-custom">
           {/* Main Title */}
           <motion.div

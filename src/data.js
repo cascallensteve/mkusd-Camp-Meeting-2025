@@ -77,8 +77,8 @@ export default {
     {
       id: 4,
       name: "Pastor MESHACK KURGAT",
-      role: "Family Life Speaker",
-      bio: "Family counselor and relationship expert",
+      role: "Bible Study",
+      bio: "Bible study coordinator and spiritual teacher",
       photo: "https://res.cloudinary.com/dqvsjtkqw/image/upload/v1755000564/WhatsApp_Image_2025-08-04_at_20.30.54_37af8a19_mmc8o3.jpg",
       message: "There is a Promise oooh yes a promise that he who endures till the end will be saved. The time in which we live is a time that needs endurance it's a time of intense excitement, Ambitions, wars, pleasures, heartbreaks, deaths and money-making, absorb the minds of men. But camp meeting is here to interrupt our thinking and summon our intellects to the throne of grace so that we may obtain mercy to use in the time of trouble. I invite you to pause all aspects of worldly activity and come join us as we seat at the feet of Jesus during our camp meeting 2025.",
       shortMessage: "There is a Promise oooh yes a promise that he who endures till the end will be saved. The time in which we live is a time that needs endurance.",
@@ -90,8 +90,8 @@ export default {
     {
       id: 5,
       name: "Pastor Linet",
-      role: "Bible Study Leader",
-      bio: "Theologian with deep biblical knowledge",
+      role: "Family Life",
+      bio: "Family counselor and relationship expert",
       photo: "https://res.cloudinary.com/dqvsjtkqw/image/upload/v1755000864/WhatsApp_Image_2025-08-04_at_20.30.55_811612f5_fg3i4e.jpg",
       message: "God's Word is alive and powerful! Together we'll dig deep into Scripture and discover treasures that will transform your faith journey. Come hungry for truth and ready to be amazed by God's revelations.",
       shortMessage: "Isaiah 54:5[5]For your Maker is your husband, The Lord of hosts is His name; And your Redeemer is the Holy One of Israel; He is called the God of the whole earth.",

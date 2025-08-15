@@ -63,7 +63,7 @@ const Feedback = () => {
     
     try {
       // Submit to Google Sheets via Apps Script
-      const response = await fetch('https://script.google.com/macros/s/AKfycbzwgNniFjlXzPV5Pj_pWvydyi-WbdpV7VjANSjMxFRJAVoixgRzGMCsvnAjPaJa2O-0og/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzVv4R-t9Pi0QcAea8_po8dbffgaQblklBfOtbpG60jOhAvqsSP9Vs0YDLEOKI19Zg/exec', {
         method: 'POST',
         mode: 'no-cors', // Required for Google Apps Script
         headers: {
@@ -153,7 +153,7 @@ const Feedback = () => {
               Your feedback has been submitted successfully. We appreciate your input and will review it shortly.
             </p>
             <p className="text-blue-600 font-medium">
-              📧 Please check your email for confirmation that your contact message was received.
+              📧 Please check your email (including spam folder) for confirmation that your contact message was received.
             </p>
           </motion.div>
         </div>

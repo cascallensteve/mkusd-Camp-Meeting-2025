@@ -141,7 +141,7 @@ const ChairMessage = () => {
               }}
               className="btn-primary text-lg px-8 py-3"
             >
-              Support Our Mission
+              Support Makambi
             </motion.button>
           </motion.div>
         </div>
